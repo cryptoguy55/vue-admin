@@ -13,13 +13,13 @@
       <el-table-column
         prop="name"
         label="商品名"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
         prop="stockQuantity"
         label="在庫数"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
@@ -49,13 +49,13 @@
       <el-table-column
         prop="updateDate"
         label="更新日"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
         fixed="right"
         label="操作"
-        width="90"
+        width="100"
       >
         <template slot-scope="scope">
           <el-button @click="handleClick" type="text" size="small">編集 |</el-button>
@@ -125,7 +125,7 @@
             <el-checkbox>予約通知を利用しない</el-checkbox>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="手仁押通知" name="4" class="p-8">
+        <el-tab-pane label="手仕舞通知" name="4" class="p-8">
           予約状況通知の条件を設定してください
           <div class="pl-8">
             <el-radio v-model="radio" label="1">手仁押日時に通知する</el-radio>

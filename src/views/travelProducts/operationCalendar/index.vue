@@ -38,14 +38,14 @@
           <el-table-column
             fixed="right"
             label="操作"
-            width="90">
+            width="100">
             <template slot-scope="scope">
               <el-button @click="handleClick" type="text" size="small">編集 |</el-button>
               <el-button type="text" size="small"> 削除</el-button>
             </template>
           </el-table-column>
         </el-table>
-        <span style="margin-left: 390px">すべてをチエック</span>
+        <span style="margin-left: 3100px">すべてをチエック</span>
       </el-tab-pane>
       <el-tab-pane label="公開済み" name="2" class="p-8">
         <p>公開済み運行カレンダーを表示しています。</p>
@@ -82,7 +82,7 @@
           <el-table-column
             fixed="right"
             label="操作"
-            width="90">
+            width="100">
             <template slot-scope="scope">
               <el-button @click="handleClick" type="text" size="small">編集 |</el-button>
               <el-button type="text" size="small"> 削除</el-button>

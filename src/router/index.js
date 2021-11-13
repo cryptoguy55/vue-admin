@@ -60,7 +60,7 @@ export const constantRoutes = [
     redirect: '/nested/menu1',
     name: 'Nested',
     meta: {
-      title: '旅行商品',
+      title: 'メニュー',
       icon: 'nested'
     },
     children: [
@@ -143,7 +143,7 @@ export const constantRoutes = [
     redirect: '/nested/menu1',
     name: 'Nested1',
     meta: {
-      title: '連行管理',
+      title: '運行管理',
       icon: 'nested'
     },
     children: [

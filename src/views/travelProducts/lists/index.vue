@@ -1,9 +1,6 @@
 <template>
   <div class="app-container">
     <p>旅行商品リストを表示しています。</p>
-    <p>+旅行商品の新規登録はこちらからどうぞ。</p>
-    <p>*「編集」を選択すると、旅行商品を編集できます。</p>
-    <p>*「削除」を選択すると、確認ダイアログを表示します。</p>
     <el-button type="danger" class="float-right" icon="el-icon-document-add" circle @click="dialogVisible = true" />
     <el-table
       :data="tableData"
@@ -19,13 +16,13 @@
       <el-table-column
         prop="name"
         label="商品名"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
         prop="departureStation"
         label="出発駅"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
@@ -37,7 +34,7 @@
       <el-table-column
         prop="arrivalStation"
         label="到着駅"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
@@ -49,13 +46,13 @@
       <el-table-column
         prop="startDate"
         label="開始日"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
         prop="endDate"
         label="終了日"
-        min-width="90"
+        min-width="100"
         sortable
       />
       <el-table-column
@@ -67,7 +64,7 @@
       <el-table-column
         fixed="right"
         label="操作"
-        width="90">
+        width="100">
         <template slot-scope="scope">
           <el-button @click="handleClick" type="text" size="small">編集 |</el-button>
           <el-button type="text" size="small"> 削除</el-button>
