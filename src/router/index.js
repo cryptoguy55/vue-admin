@@ -66,69 +66,73 @@ export const constantRoutes = [
     children: [
       {
         path: 'Nested-1',
-        component: () => import('@/views/nested/menu2/index'),
+        component: () => import('@/views/travelProducts/lists/index'),
         name: 'Nested-1',
         meta: { title: '旅行商品の一覧' }
       },
       {
         path: 'Nested-2',
-        component: () => import('@/views/nested/menu1/index'), // Parent router-view
+        component: () => import('@/views/travelProducts/menuLists'), // Parent router-view
         name: 'Nested-2',
-        meta: { title: 'メニュー' },
+        meta: { title: 'メニュー' }
+      },
+      {
+        path: 'Nested-2-1',
+        component: () => import('@/views/travelProducts/seats'),
+        name: 'Nested-2-1',
+        meta: { title: '座席' },
         children: [
           {
-            path: 'Nested-2-1',
-            component: () => import('@/views/nested/menu1/menu1-1'),
-            name: 'Nested-2-1',
-            meta: { title: '座席' },
-            children: [
-              {
-                path: 'Nested-2-1-1',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-                name: 'Nested-2-1-1',
-                meta: { title: 'ボックス席・相席' }
-              },
-              {
-                path: 'Nested-2-1-2',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Nested-2-1-2',
-                meta: { title: '空席・予約済' }
-              },
-              {
-                path: 'Nested-2-1-3',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Nested-2-1-3',
-                meta: { title: '申込人数' }
-              }
-            ]
+            path: 'Nested-2-1-1',
+            component: () => import('@/views/travelProducts/seats/reservation'),
+            name: 'Nested-2-1-1',
+            meta: { title: '予約対象・予約外' }
           },
           {
-            path: 'Nested-2-2',
-            component: () => import('@/views/nested/menu1/menu1-2'),
-            name: 'Menu1-2',
-            meta: { title: '集計' },
-            children: [
-              {
-                path: 'Nested-2-2-1',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-                name: 'Menu1-2-1',
-                meta: { title: 'メニュー集計' }
-              },
-              {
-                path: 'Nested-2-2-2',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Menu1-2-2',
-                meta: { title: '売上集計' }
-              }
-            ]
+            path: 'Nested-2-1-2',
+            component: () => import('@/views/travelProducts/seats/boxSeats'),
+            name: 'Nested-2-1-2',
+            meta: { title: 'ボックス席・相席' }
+          },
+          {
+            path: 'Nested-2-1-3',
+            component: () => import('@/views/travelProducts/seats/vacancy'),
+            name: 'Nested-2-1-3',
+            meta: { title: '空席・予約済' }
+          },
+          {
+            path: 'Nested-2-1-4',
+            component: () => import('@/views/travelProducts/seats/applicants'),
+            name: 'Nested-2-1-3',
+            meta: { title: '申込人数' }
           }
         ]
       },
       {
         path: 'Nested-3',
-        component: () => import('@/views/nested/menu2/index'),
+        component: () => import('@/views/travelProducts/operationCalendar/index'),
         name: 'Nested-3',
         meta: { title: '運行カレンダー' }
+      },
+      {
+        path: 'Nested-2-2',
+        component: () => import('@/views/nested/menu1/menu1-2'),
+        name: 'Menu1-2',
+        meta: { title: '集計' },
+        children: [
+          {
+            path: 'Nested-2-2-1',
+            component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
+            name: 'Menu1-2-1',
+            meta: { title: 'メニュー集計' }
+          },
+          {
+            path: 'Nested-2-2-2',
+            component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
+            name: 'Menu1-2-2',
+            meta: { title: '売上集計' }
+          }
+        ]
       }
 
     ]
